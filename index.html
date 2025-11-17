@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <!-- Capa de fondo animada -->
+  <div class="bg-anim"></div>
+
+  <!-- Menú lateral (desktop) -->
+  <nav class="side-nav" aria-label="Secciones del portfolio">
+    <ul id="side-nav-list">
+      <li>
+        <a href="#top" data-label="Portfolio" aria-label="Portfolio"></a>
+        <span class="nav-label">Portfolio</span>
+      </li>
+      <li>
+        <a href="#bio" data-label="Bio" aria-label="Bio"></a>
+        <span class="nav-label">Bio</span>
+      </li>
+      <li>
+        <a href="#obras" data-label="Obras" aria-label="Obras"></a>
+        <span class="nav-label">Obras</span>
+      </li>
+      <li>
+        <a href="#fotos" data-label="Fotos" aria-label="Fotos"></a>
+        <span class="nav-label">Fotos</span>
+      </li>
+      <li>
+        <a href="#musica" data-label="Música" aria-label="Música"></a>
+        <span class="nav-label">Música</span>
+      </li>
+      <li>
+        <a href="#animaciones" data-label="Animaciones/Visuales" aria-label="Animaciones/Visuales"></a>
+        <span class="nav-label">Visuales</span>
+      </li>
+      <li>
+        <a href="#contacto" data-label="Contacto" aria-label="Contacto"></a>
+        <span class="nav-label">Contacto</span>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Navbar móvil inferior -->
+  <nav class="mobile-nav" aria-label="Navegación móvil">
+    <button data-target="#top">Top</button>
+    <button data-target="#bio">Bio</button>
+    <button data-target="#obras">Obras</button>
+    <button data-target="#fotos">Fotos</button>
+    <button data-target="#musica">Música</button>
+    <button data-target="#animaciones">Visuales</button>
+    <button data-target="#contacto">Contacto</button>
+  </nav>
+
+  <main class="container">
+
+    <!-- 1) Portada -->
+    <section id="top" class="section section--center" data-section-title="Portfolio">
+      <h1 class="display">Portfolio</h1>
+    </section>
+
+    <!-- 2) Bio -->
+    <section id="bio" class="section" data-section-title="Bio">
+      <header class="section-title"><h2>Bio</h2></header>
+
+      <div class="bio-grid">
+        <div class="bio-text card">
+          <p>
+            Mi nombre es Gonzalo Lucero, soy artista y desarrollador orientado al sonido, a visuales y a obras interactivas. Me interesa el vinculo entre la tecnología, la programacion y la politica en
+            dispositivos, instalaciones y piezas performáticas, con foco en experiencias en vivo.
+          </p>
+        </div>
+        <div class="bio-image card">
+          <img src="./assets/perfil.webp" alt="Retrato / bio" />
+        </div>
+        <div class="bio-text bio-text--wide card">
+          <p>
+            Me interpela el cruce entre lo orgánico y lo sintético, interfaces físicas que emergen de la colaboración entre personas y máquinas. En música exploro instrumentos virtuales y electroacusticos. En imagen, luz, proyección y algoritmos visuales orientados a la escena.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4) Obras (slider con 4 ítems: descripción arriba + 3 imágenes verticales) -->
+    <section id="obras" class="section" data-section-title="Obras">
+      <header class="section-title"><h2>Obras</h2></header>
+
+      <div class="slider slider--fade">
+        <!-- Radios del slider de obras -->
+        <input type="radio" name="obra" id="obra-1" checked>
+        <input type="radio" name="obra" id="obra-2">
+        <input type="radio" name="obra" id="obra-3">
+        <input type="radio" name="obra" id="obra-4">
+
+        <div class="slides card">
+          <!-- Slide 1 -->
+          <article class="slide slide--1">
+            <div class="obra-item">
+              <div class="obra-text">
+                <h3>Las calles andan diciendo</h3>
+                <p>
+                  Acción colectiva donde se proyectaron frases recogidas de manifestaciones, carteles y aportes del público sobre las paredes de la universidad. El proyecto construyó un archivo vivo, en constante transformación, que dio visibilidad a voces callejeras, populares y muchas veces silenciadas
+                </p>
+              </div>
+              <div class="obra-gallery">
+                <img src="./assets/obras/obra.png" alt="Las calles andan diciendo 1">
+                <img src="./assets/obras/obra2.png" alt="Las calles andan diciendo 2">
+                <img src="./assets/obras/obra3.png" alt="Las calles andan diciendo 3">
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 2 -->
+          <article class="slide slide--2">
+            <div class="obra-item">
+              <div class="obra-text">
+                <h3>Evergreen</h3>
+                <p>
+Experiencia de realidad virtual con paisajes digitales. Invita a la contemplación digital de la naturaleza. Construye un entorno desde el asombro, la inmersión y la pausa.
+                </p>
+              </div>
+              <div class="obra-gallery">
+                <img src="./assets/obras/obra13.png" alt="Picnic 1">
+                <img src="./assets/obras/obra14.png" alt="Picnic 2">
+                <img src="./assets/obras/obra15.png" alt="Picnic 3">
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 3 -->
+          <article class="slide slide--3">
+            <div class="obra-item">
+              <div class="obra-text">
+                <h3>Tecno Vacui</h3>
+                <p>
+Instalación donde a partir de un guante, se activan visuales y sonidos en tiempo real sobre televisores y relés reciclados. A través del cuerpo, el espectador intervenía una máquina visual-sonora. 
+                </p>
+              </div>
+              <div class="obra-gallery">
+                <img src="./assets/obras/obra4.png" alt="Tecno Vacui 1">
+                <img src="./assets/obras/obra5.png" alt="Tecno Vacui 2">
+                <img src="./assets/obras/obra6.png" alt="Tecno Vacui 3">
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 4 -->
+          <article class="slide slide--4">
+            <div class="obra-item">
+              <div class="obra-text">
+                <h3>Pena - Performers Electroacústicos No Androides</h3>
+                <p>
+Instalación performática propuso una exploración de objetos reciclados y solenoides como instrumentos percutivos. Discutía los límites entre tecnología, materialidad y acción sonora.
+                </p>
+              </div>
+              <div class="obra-gallery">
+                <img src="./assets/obras/obra7.png" alt="Evergreen 1">
+                <img src="./assets/obras/obra8.png" alt="Evergreen 2">
+                <img src="./assets/obras/obra9.png" alt="Evergreen 3">
+              </div>
+            </div>
+          </article>
+
+          <!-- Flechas del slider de obras -->
+          <div class="nav-arrows">
+            <!-- Cuando está en la 1 -->
+            <label for="obra-4" class="arrow arrow-left  obra-when-1" aria-label="anterior"></label>
+            <label for="obra-2" class="arrow arrow-right obra-when-1" aria-label="siguiente"></label>
+
+            <!-- Cuando está en la 2 -->
+            <label for="obra-1" class="arrow arrow-left  obra-when-2" aria-label="anterior"></label>
+            <label for="obra-3" class="arrow arrow-right obra-when-2" aria-label="siguiente"></label>
+
+            <!-- Cuando está en la 3 -->
+            <label for="obra-2" class="arrow arrow-left  obra-when-3" aria-label="anterior"></label>
+            <label for="obra-4" class="arrow arrow-right obra-when-3" aria-label="siguiente"></label>
+
+            <!-- Cuando está en la 4 -->
+            <label for="obra-3" class="arrow arrow-left  obra-when-4" aria-label="anterior"></label>
+            <label for="obra-1" class="arrow arrow-right obra-when-4" aria-label="siguiente"></label>
+          </div>
+        </div>
+
+        <!-- Dots del slider de obras -->
+        <div class="dots">
+          <label for="obra-1" class="dot" aria-label="ir a obra 1"></label>
+          <label for="obra-2" class="dot" aria-label="ir a obra 2"></label>
+          <label for="obra-3" class="dot" aria-label="ir a obra 3"></label>
+          <label for="obra-4" class="dot" aria-label="ir a obra 4"></label>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5) Fotos -->
+    <section id="fotos" class="section" data-section-title="Fotos">
+      <header class="section-title"><h2>Fotos</h2></header>
+
+      <div class="slider slider--fade">
+        <input type="radio" name="ph" id="ph-1" checked>
+        <input type="radio" name="ph" id="ph-2">
+
+        <div class="slides card">
+          <!-- Slide 1: 6 fotos -->
+          <article class="slide slide--1">
+            <div class="gallery fotos-gallery">
+              <figure class="foto foto-vert">
+                <img src="./assets/fotos/image3.webp" alt="Serie 1 - foto 1">
+              </figure>
+              <figure class="foto foto-vert">
+                <img src="./assets/fotos/image2.webp" alt="Serie 1 - foto 2">
+              </figure>
+              <figure class="foto foto-horiz">
+                <img src="./assets/fotos/image.webp" alt="Serie 1 - foto 3">
+              </figure>
+              <figure class="foto foto-horiz">
+                <img src="./assets/fotos/image5.webp" alt="Serie 1 - foto 4">
+              </figure>
+              <figure class="foto foto-vert">
+                <img src="./assets/fotos/image4.webp" alt="Serie 1 - foto 5">
+              </figure>
+              <figure class="foto foto-vert">
+                <img src="./assets/fotos/image6.webp" alt="Serie 1 - foto 6">
+              </figure>
+            </div>
+          </article>
+
+          <!-- Slide 2: 6 fotos -->
+          <article class="slide slide--2">
+            <div class="gallery fotos-gallery">
+              <figure class="foto foto-horiz">
+                <img src="./assets/fotos/image7.webp" alt="Serie 2 - foto 1">
+              </figure>
+              <figure class="foto foto-vert">
+                <img src="./assets/fotos/image11.webp" alt="Serie 2 - foto 2">
+              </figure>
+              <figure class="foto foto-vert">
+                <img src="./assets/fotos/image8.webp" alt="Serie 2 - foto 3">
+              </figure>
+              <figure class="foto foto-vert">
+                <img src="./assets/fotos/image9.webp" alt="Serie 2 - foto 4">
+              </figure>
+              <figure class="foto foto-vert">
+                <img src="./assets/fotos/image10.webp" alt="Serie 2 - foto 5">
+              </figure>
+            </div>
+          </article>
+
+          <div class="nav-arrows">
+            <label for="ph-2" class="arrow arrow-left  ph-when-1" aria-label="siguiente"></label>
+            <label for="ph-2" class="arrow arrow-right ph-when-1" aria-label="siguiente"></label>
+            <label for="ph-1" class="arrow arrow-left  ph-when-2" aria-label="anterior"></label>
+            <label for="ph-1" class="arrow arrow-right ph-when-2" aria-label="anterior"></label>
+          </div>
+        </div>
+
+        <div class="dots">
+          <label for="ph-1" class="dot" aria-label="ir a fotos 1"></label>
+          <label for="ph-2" class="dot" aria-label="ir a fotos 2"></label>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6) Música (3 slides, imagen fija + audio local) -->
+    <section id="musica" class="section" data-section-title="Música">
+      <header class="section-title"><h2>Música</h2></header>
+
+      <div class="slider slider--fade">
+        <input type="radio" name="music" id="music-1" checked>
+        <input type="radio" name="music" id="music-2">
+        <input type="radio" name="music" id="music-3">
+
+        <div class="slides card">
+          <!-- Track 1 -->
+          <article class="slide slide--1">
+            <div class="music-track">
+              <div class="media-frame">
+                <img src="./assets/audio/1.webp" alt="Portada tema 1">
+              </div>
+              <audio controls>
+                <source src="./assets/audio/conlucas.mp3" type="audio/mpeg">
+                Tu navegador no soporta audio HTML5.
+              </audio>
+            </div>
+            <div class="desc">
+              <p>Texturas con pedales, loops y capas rítmicas, guitarras, sintetizadores, maquinas de ritmos</p>
+            </div>
+          </article>
+
+          <!-- Track 2 -->
+          <article class="slide slide--2">
+            <div class="music-track">
+              <div class="media-frame">
+                <img src="./assets/audio/2.jpg" alt="Portada tema 2">
+              </div>
+              <audio controls>
+                <source src="./assets/audio/smooth.mp3" type="audio/mpeg">
+                Tu navegador no soporta audio HTML5.
+              </audio>
+            </div>
+            <div class="desc">
+              <p>Texturas con sintetizadores</p>
+            </div>
+          </article>
+
+          <!-- Track 3 -->
+          <article class="slide slide--3">
+            <div class="music-track">
+              <div class="media-frame">
+                <img src="./assets/audio/3.jpg" alt="Portada tema 3">
+              </div>
+              <audio controls>
+                <source src="./assets/audio/Arena final.mp3" type="audio/mpeg">
+                Tu navegador no soporta audio HTML5.
+              </audio>
+            </div>
+            <div class="desc">
+              <p>“Vicio” - 2025 - Codex — Produccion y composicion musical </p>
+            </div>
+          </article>
+
+          <div class="nav-arrows">
+            <!-- cuando está en 1 -->
+            <label for="music-3" class="arrow arrow-left  music-when-1" aria-label="anterior"></label>
+            <label for="music-2" class="arrow arrow-right music-when-1" aria-label="siguiente"></label>
+            <!-- cuando está en 2 -->
+            <label for="music-1" class="arrow arrow-left  music-when-2" aria-label="anterior"></label>
+            <label for="music-3" class="arrow arrow-right music-when-2" aria-label="siguiente"></label>
+            <!-- cuando está en 3 -->
+            <label for="music-2" class="arrow arrow-left  music-when-3" aria-label="anterior"></label>
+            <label for="music-1" class="arrow arrow-right music-when-3" aria-label="siguiente"></label>
+          </div>
+        </div>
+
+        <div class="dots">
+          <label for="music-1" class="dot" aria-label="ir a música 1"></label>
+          <label for="music-2" class="dot" aria-label="ir a música 2"></label>
+          <label for="music-3" class="dot" aria-label="ir a música 3"></label>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7) Animaciones / Visuales (3 slides de gifs) -->
+    <section id="animaciones" class="section" data-section-title="Animaciones/Visuales">
+      <header class="section-title"><h2>Visuales</h2></header>
+
+      <div class="slider slider--fade">
+        <input type="radio" name="anim" id="anim-1" checked>
+        <input type="radio" name="anim" id="anim-2">
+        <input type="radio" name="anim" id="anim-3">
+
+        <div class="slides card">
+          <!-- gif 1 -->
+          <article class="slide slide--1">
+            <div class="anim-gif-frame">
+              <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExanpsaDJoNzAxd3ZqM28ycTRuanpzYWxwMDQ0NjA1Z21rNzE5bXZtYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hXCf3vgifwp6ho4M7g/giphy.gif" alt="">
+            </div>
+          </article>
+
+          <!-- gif 2 -->
+          <article class="slide slide--2">
+            <div class="anim-gif-frame">
+              <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGk4ZTFiamFlZzR3NjEzcTF2ajN3aHJnNDE1OHV0dWMxdHA2Y3NrdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cMWR71trxjFQk4qZJ9/giphy.gif" alt="">
+            </div>
+          </article>
+
+          <!-- gif 3 -->
+          <article class="slide slide--3">
+            <div class="anim-gif-frame">
+              <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWRkMmR1OGJ4d3U2dGphMzlxZDVzZjBscDI1ZzI4ODgxYWEwcDhqbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MAopDMzBPgHhiPk8Oc/giphy.gif" alt="">
+            </div>
+          </article>
+
+          <div class="nav-arrows">
+            <!-- cuando está en 1 -->
+            <label for="anim-3" class="arrow arrow-left  anim-when-1" aria-label="anterior"></label>
+            <label for="anim-2" class="arrow arrow-right anim-when-1" aria-label="siguiente"></label>
+            <!-- cuando está en 2 -->
+            <label for="anim-1" class="arrow arrow-left  anim-when-2" aria-label="anterior"></label>
+            <label for="anim-3" class="arrow arrow-right anim-when-2" aria-label="siguiente"></label>
+            <!-- cuando está en 3 -->
+            <label for="anim-2" class="arrow arrow-left  anim-when-3" aria-label="anterior"></label>
+            <label for="anim-1" class="arrow arrow-right anim-when-3" aria-label="siguiente"></label>
+          </div>
+        </div>
+
+        <div class="dots">
+          <label for="anim-1" class="dot" aria-label="ir a animaciones 1"></label>
+          <label for="anim-2" class="dot" aria-label="ir a animaciones 2"></label>
+          <label for="anim-3" class="dot" aria-label="ir a animaciones 3"></label>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8) Contacto -->
+    <section id="contacto" class="section" data-section-title="Contacto">
+      <header class="section-title"><h2>Contacto</h2></header>
+
+      <div class="card">
+
+        <div class="social">
+          <a class="social__link" href="https://www.instagram.com/gon_luceroi/" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.75a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg>
+            <span>Instagram</span>
+          </a>
+          <a class="social__link" href="https://github.com/GonLucero" aria-label="GitHub">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.5-3.9-1.5-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1 1.6 1 .9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.6-.3-5.4-1.3-5.4-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C18 4.2 19 4.5 19 4.5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.8 5.5-5.4 5.8.4.3.7.9.7 1.8v2.6c0 .3.2.7.8.6A10.99 10.99 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+  </svg>
+  <span>GitHub</span>
+</a>
+          <a class="social__link" href="mailto:gonzalom.lucero@gmail.com" aria-label="Gmail">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <!-- Iconito tipo sobre / Gmail simple -->
+              <path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm0 2v.2l10 6.25L22 6.2V6H2zm0 3.8V19h20V9.8l-9.4 5.9a1 1 0 0 1-1.1 0L2 9.8z"/>
+            </svg>
+            <span>Gmail</span>
+          </a>
+
+          <a class="social__link" href="https://ar.linkedin.com/in/gon-lucero-js" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.8v2.2h.1c.7-1.2 2.3-2.4 4.7-2.4 5 0 5.9 3.3 5.9 7.5V24h-5v-6.9c0-1.6 0-3.7-2.3-3.7s-2.6 1.8-2.6 3.6V24H8z"/></svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox para fotos -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" aria-label="Cerrar imagen"></button>
+    <img class="lightbox__img" src="" alt="">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
